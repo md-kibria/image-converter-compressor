@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert images to JPG, PNG, WebP, etc. formats for free in just a few clicks and compress and reduce image size. Easy to use and fast." />
+    <meta name="keywords" content="Image Converter, Photo Compressor, JPG to PNG, PNG to JPG, WebP Converter, Image Compressor Online, Free Image Converter, Online Photo Resizer, Compress JPG, convert image format, ছবি কনভার্টার, ফটো কম্প্রেস, ইমেজ সাইজ কমানো, ছবি ছোট করা">
+    <title>Free Online Image Converter & Compressor | Convert JPG to PNG, WebP</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-image"></i>
+                <h1 style="display: none;">Free online image converter and compressor tool</h1>
+                <h1>Image Converter & Compressor</h1>
+            </div>
+            <p class="subtitle">Convert and compress your images with ease</p>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <h2>Drop your images here</h2>
+                        <p>or click to browse files</p>
+                        <input type="file" id="fileInput" multiple accept="image/*" hidden>
+                        <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+                            Browse Files
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-section" id="controlsSection" style="display: none;">
+                <div class="control-group">
+                    <label for="formatSelect">Output Format:</label>
+                    <select id="formatSelect">
+                        <option value="jpeg">JPEG</option>
+                        <option value="png">PNG</option>
+                        <option value="webp">WebP</option>
+                        <option value="bmp">BMP</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="qualitySlider">Quality: <span id="qualityValue">100</span>%</label>
+                    <input type="range" id="qualitySlider" min="10" max="100" value="100">
+                </div>
+
+                <div class="control-group">
+                    <label for="maxWidth">Max Width (px):</label>
+                    <input type="number" id="maxWidth" placeholder="Original" min="1">
+                </div>
+
+                <div class="control-group">
+                    <label for="maxHeight">Max Height (px):</label>
+                    <input type="number" id="maxHeight" placeholder="Original" min="1">
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="processBtn">
+                        <i class="fas fa-magic"></i>
+                        Process Images
+                    </button>
+                    <button class="btn btn-secondary" id="clearBtn">
+                        <i class="fas fa-trash"></i>
+                        Clear All
+                    </button>
+                </div>
+            </div>
+
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <h3>Preview & Download</h3>
+                <div class="images-grid" id="imagesGrid">
+                    <!-- Processed images will appear here -->
+                </div>
+            </div>
+
+            <div class="description-section">
+                <div class="description-content">
+                    <h2>Why Choose Our Image Converter & Compressor?</h2>
+                    <p>Our free online <strong>image converter</strong> and <strong>photo compressor</strong> is the perfect solution for all your image processing needs. Whether you need to <strong>convert JPG to PNG</strong>, <strong>resize images</strong> for web use, or compress photos to reduce file size, our tool handles it all with professional quality results.</p>
+                    
+                    <p>Transform your images between popular formats including JPEG, PNG, WebP, and BMP instantly. Our advanced compression technology reduces file sizes by up to 80% while maintaining excellent image quality. Perfect for web developers, designers, photographers, and anyone who needs to optimize images for faster loading times and better performance.</p>
+                    
+                    <p>All processing happens directly in your browser - your images never leave your device, ensuring complete privacy and security. No registration required, no file size limits, and no watermarks. Start converting and compressing your images now!</p>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h2>Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h3>Format Conversion</h3>
+                        <p>Convert between JPEG, PNG, WebP, and BMP formats</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <h3>Smart Compression</h3>
+                        <p>Reduce file size while maintaining quality</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <h3>Resize Images</h3>
+                        <p>Resize images to your desired dimensions</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-download"></i>
+                        <h3>Batch Processing</h3>
+                        <p>Process multiple images at once</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you compress images?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our <strong>image compressor</strong> uses advanced algorithms to reduce file size while preserving visual quality. You can adjust the compression level from 10% to 100% quality. Lower quality settings create smaller files, while higher settings maintain better image quality. The tool processes images directly in your browser for maximum privacy.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is WebP format?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>WebP</strong> is a modern image format developed by Google that provides superior compression compared to JPEG and PNG. WebP images are typically 25-35% smaller than JPEG files while maintaining the same quality. It's perfect for web use as it reduces loading times and bandwidth usage.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I convert JPG to PNG?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Our <strong>image converter</strong> supports converting <strong>JPG to PNG</strong> and vice versa, along with WebP and BMP formats. Simply upload your JPG file, select PNG as the output format, and click process. PNG format supports transparency, making it ideal for logos and graphics with transparent backgrounds.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I resize images?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To <strong>resize images</strong>, enter your desired maximum width and height in pixels. The tool will automatically maintain the aspect ratio to prevent distortion. Leave the fields empty to keep original dimensions. This is perfect for creating thumbnails, optimizing for social media, or preparing images for web use.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is my data secure?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! All image processing happens directly in your browser using client-side JavaScript. Your images never leave your device or get uploaded to any servers. This ensures complete privacy and security. No registration, no data collection, and no watermarks on your processed images.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What file formats are supported?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our <strong>photo converter</strong> supports all major image formats including JPEG, PNG, WebP, and BMP. You can convert between any of these formats and compress them to reduce file size. The tool accepts common image file extensions and processes them instantly in your browser.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I process multiple images at once?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Our tool supports <strong>batch processing</strong> of multiple images. Simply select multiple files when uploading, and the tool will process them all with the same settings. This saves time when you need to convert or compress many images at once, perfect for photographers and web developers.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is this image converter free?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, our <strong>free online image converter</strong> is completely free to use with no hidden costs. There are no file size limits, no watermarks, and no registration required. You can convert and compress as many images as you need without any restrictions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Image Converter. Built with ❤️ by kibria.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processing your images...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

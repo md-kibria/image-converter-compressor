@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://image-compressor-converter.netlify.app//sitemap.xml
+Sitemap: https://image-converter-compressor-resizer.netlify.app/sitemap.xml
 
 # Allow all search engines to crawl the site
 Allow: /index.html

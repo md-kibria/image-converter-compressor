@@ -140,6 +140,11 @@ class ImageConverter {
 
             this.displayProcessedImages();
             this.showNotification('All images processed successfully!', 'success');
+            
+            // Scroll to preview section after processing completes
+            setTimeout(() => {
+                this.previewSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
         } catch (error) {
             console.error('Error processing images:', error);
             this.showNotification('Error processing images. Please try again.', 'error');
